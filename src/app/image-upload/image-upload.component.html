@@ -1,0 +1,8 @@
+<div class="upload-container">
+    <input type="file" accept="image/*" (change)="onFileSelected($event)">
+    <img *ngIf="previewUrl" [src]="previewUrl" class="preview-image">
+    <div *ngIf="endangeredMessage" class="endangered-message" [ngClass]="{'endangered': isEndangered, 'not-endangered': !isEndangered}">
+      {{endangeredMessage}}
+    </div>
+  </div>
+  
